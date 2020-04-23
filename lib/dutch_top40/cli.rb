@@ -5,7 +5,6 @@ class DutchTop40::CLI
         puts "Dutch Top40 - week  #{Time.now.strftime("%U")}", ""
         puts "One moment, acquiring data."
         list_songs
-        sleep(5)
         menu
     end
 
@@ -30,7 +29,7 @@ class DutchTop40::CLI
                     when 1..@songs.size
                         puts "Current rank #{input}."
                         puts "#{@songs[input.to_i-1].title} - performing artist(s): #{@songs[input.to_i-1].name}"
-                        puts "weeks listed: #{@songs[input.to_i-1].listed} - last weeks rank #{@songs[input.to_i-1].last_weeks_rank}","" 
+                        puts "weeks in Top40: #{@songs[input.to_i-1].listed} - last weeks rank: #{@songs[input.to_i-1].last_weeks_rank}","" 
                     else 
                         puts "Invalid input!" unless input == 'exit' || input == 'list'
                     if input == 'list' 

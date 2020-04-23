@@ -14,18 +14,7 @@ class DutchTop40::Songs
 
 
     def self.list
-        self.scrape_songs
-    end
-
-    def self.scrape_songs
-        doc = Nokogiri::HTML(open("http://top40.nl"))
-        doc.search('.listScroller').search('.top40List').each do |song|
-                title = song.search('.songtitle').text.strip
-                name = song.search('.artist').text
-                listed = song.search('.details').text.split(' | ')[1].gsub(/Aantal weken: /,'').strip
-                last_weeks_rank = song.search('.details').text.split(' | ')[0].gsub(/Vorige week: #/,'').strip
-                self.new(title, name, listed, last_weeks_rank)
-        end
+        DutchTop40::Scraper.scrape_songs
         @@songs
     end
 
