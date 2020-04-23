@@ -13,27 +13,25 @@ class DutchTop40::CLI
         @songs = DutchTop40::Songs.list
         print_songs
         puts
-       
     end
 
     def print_songs
+        binding.pry
         @songs.each.with_index(1) do |song, index| 
-            puts "#{index}.  #{song.values[0]}"
+            puts "#{index}.  #{song.title}"
         end
     end
 
-    def menu
-        
+    def menu       
             input = nil
-            
             while input != 'exit'
                 puts "Which song do you want more info on? Type list to see list again, type exit to quit.",""
                 input = gets.strip.downcase
                 case input.to_i
                     when 1..@songs.size
                         puts "Current rank #{input}."
-                        puts "#{@songs[input.to_i-1].values[0]} - performing artist(s): #{@songs[input.to_i-1].values[1]}"
-                        puts "weeks listed: #{@songs[input.to_i-1].values[2]} - last weeks rank #{@songs[input.to_i-1].values[3]}","" 
+                        puts "#{@songs[input.to_i-1].title} - performing artist(s): #{@songs[input.to_i-1].name}"
+                        puts "weeks listed: #{@songs[input.to_i-1].listed} - last weeks rank #{@songs[input.to_i-1].last_weeks_rank}","" 
                     else 
                         puts "Invalid input!" unless input == 'exit' || input == 'list'
                     if input == 'list' 
@@ -43,10 +41,7 @@ class DutchTop40::CLI
                         goodbye
                     end
                 end
-                
             end
-
-
     end
 
     def goodbye
