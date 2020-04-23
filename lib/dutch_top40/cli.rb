@@ -16,7 +16,6 @@ class DutchTop40::CLI
     end
 
     def print_songs
-        binding.pry
         @songs.each.with_index(1) do |song, index| 
             puts "#{index}.  #{song.title}"
         end
