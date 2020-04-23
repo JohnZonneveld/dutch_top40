@@ -5,6 +5,8 @@ type list to re-diplay the list or exit to quit.
 
 ## Installation
 
+Add this line to your application's Gemfile:
+
 ```ruby
 gem 'dutch_top40'
 ```
