@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require "bundler/setup"
+require "dutch_top40"
+
+DutchTop40::CLI.new.call

@@ -1,6 +1,7 @@
-require "dutch_top40/version"
+require_relative "./dutch_top40/version"
+require 'nokogiri'
+require 'open-uri'
 
-module DutchTop40
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative './dutch_top40/cli'
+require_relative './dutch_top40/songs'
+

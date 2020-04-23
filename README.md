@@ -1,12 +1,9 @@
 # DutchTop40
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dutch_top40`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to my dutch_top40 gem! This is a simple CLI scraper of http://top40.nl and will list you the current weeks ranking. At startup it will show you the current listing. You have the option to select a title by typing in its number, it will show you the 'title', 'performing artist(s), weeks in the list and last weeks position in the list.
+type list to re-diplay the list or exit to quit.
 
 ## Installation
-
-Add this line to your application's Gemfile:
 
 ```ruby
 gem 'dutch_top40'
@@ -22,7 +19,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Usage is pretty simple. At startup current ranking will be displayed. More info on a title is obtained by entering its ranking number. Type 'exit' to quit or 'list' to redisplay the list. New version of the hitlist is released on Friday.
 
 ## Development
 
@@ -41,4 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the DutchTop40 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/dutch_top40/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the DutchTop40 project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/raspimeteo/dutch_top40/blob/master/CODE_OF_CONDUCT.md).
