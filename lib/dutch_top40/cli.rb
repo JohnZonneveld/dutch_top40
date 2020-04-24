@@ -2,8 +2,8 @@ class DutchTop40::CLI
 
     def call
         logo
-        puts "Dutch Top40 - week  #{Time.now.strftime("%U")}", ""
-        puts "One moment, acquiring data."
+        
+        puts "One moment, acquiring data.",""
         list_songs
         menu
     end
@@ -15,6 +15,7 @@ class DutchTop40::CLI
     end
 
     def print_songs
+        puts "Dutch Top40 - week  #{Time.now.strftime("%U")}", ""
         @songs.each.with_index(1) do |song, index| 
             puts "#{index}.  #{song.title}"
         end
@@ -27,9 +28,12 @@ class DutchTop40::CLI
                 input = gets.strip.downcase
                 case input.to_i
                     when 1..@songs.size
+                        puts "------------------------------------------------------------------------------------"
                         puts "Current rank #{input}."
+                        puts "------------------------------------------------------------------------------------"
                         puts "#{@songs[input.to_i-1].title} - performing artist(s): #{@songs[input.to_i-1].name}"
-                        puts "weeks in Top40: #{@songs[input.to_i-1].listed} - last weeks rank: #{@songs[input.to_i-1].last_weeks_rank}","" 
+                        puts "weeks in Top40: #{@songs[input.to_i-1].listed} - last weeks rank: #{@songs[input.to_i-1].last_weeks_rank}"
+                        puts "------------------------------------------------------------------------------------"
                     else 
                         puts "Invalid input!" unless input == 'exit' || input == 'list'
                     if input == 'list' 

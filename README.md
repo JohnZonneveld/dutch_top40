@@ -21,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-Usage is pretty simple. At startup current ranking will be displayed. More info on a title is obtained by entering its ranking number. Type 'exit' to quit or 'list' to redisplay the list. New version of the hitlist is released on Friday.
+Usage is pretty simple. At startup current ranking will be displayed. More info on a title is obtained by entering its ranking number. Type 'exit' to quit or 'list' to redisplay the list. New version of the hitlist is released on Saturday.
 
 ## Development
 
